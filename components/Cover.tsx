@@ -125,7 +125,7 @@ export default function Cover({ title, subtitle, enableTyping = false }: CoverPr
 
   return (
     <div id="panel" ref={panelRef} className="panel-cover">
-      <div className="panel-cover--overlay cover-slate"></div>
+      {/* <div className="panel-cover--overlay cover-slate"></div> */}
       <div className="panel-main">
         <div className="panel-main__inner panel-inverted">
           <div className="panel-main__content">

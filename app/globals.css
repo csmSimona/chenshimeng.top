@@ -84,10 +84,10 @@
   /* 继承父元素的背景图片 */
   background: inherit;
   /* 应用模糊效果 */
-  filter: blur(6px);
-  -webkit-filter: blur(6px);
-  -moz-filter: blur(6px);
-  -o-filter: blur(6px);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
   /* 扩展模糊区域以避免边缘透明问题 */
   margin: -20px;
   /* 确保模糊层在底层 */
