@@ -3,6 +3,33 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* 自定义字体 */
+@font-face {
+  font-family: 'BodoniFLF-Bold';
+  src: url('/BodoniFLF-Bold.ttf') format('truetype');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regattia-Bold';
+  src: url('/Regattia-Bold.otf') format('opentype');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'TrajanPro-Bold';
+  src: url('/TrajanPro-Bold.otf') format('opentype');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -65,37 +92,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* 确保磨砂玻璃效果可见 */
-  background-color: rgba(0, 0, 0, 0.3);
-  /* 增加一个微妙的边框效果增强视觉层次感 */
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.45);
   z-index: 2;
   overflow: hidden;
-}
-
-/* 使用伪元素实现磨砂玻璃效果（兼容更多浏览器） */
-.panel-cover--overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* 继承父元素的背景图片 */
-  background: inherit;
-  /* 应用模糊效果 */
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-  -moz-filter: blur(4px);
-  -o-filter: blur(4px);
-  /* 扩展模糊区域以避免边缘透明问题 */
-  margin: -20px;
-  /* 确保模糊层在底层 */
-  z-index: -1;
-}
-
-.cover-slate {
-  /* background-color: rgba(0, 0, 0, 0); */
 }
 
 .panel-main {
@@ -151,30 +150,34 @@
 
 /* 标题样式 */
 .panel-cover__title {
-  font-size: 36px;
+  font-family: 'TrajanPro-Bold';
+  font-size: 56px;
   font-weight: 700;
-  margin: 0 0 10px;
-  line-height: 1.2;
+  margin: 0 0 40px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
 }
 
 .panel-cover__subtitle {
   font-size: 18px;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0 0 35px;
   opacity: 0.9;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
 }
 
 .panel-cover__divider {
-  width: 50px;
-  height: 2px;
+  width: 100px;
+  height: 1px;
   background: rgba(255, 255, 255, 0.5);
   border: none;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 /* 导航样式 */
 .navigation-wrapper {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .cover-navigation {
@@ -189,7 +192,6 @@
 
 .navigation li {
   display: inline-block;
-  margin: 0 10px;
 }
 
 .blog-button {
@@ -264,15 +266,26 @@
 @media (max-width: 768px) {
   .panel-cover__title {
     font-size: 28px;
+    margin: 0 0 30px;
+    line-height: 1.3;
   }
 
   .panel-cover__subtitle {
     font-size: 16px;
+    margin: 0 0 25px;
+    line-height: 1.5;
+  }
+
+  .panel-cover__divider {
+    margin: 30px auto;
+  }
+
+  .navigation-wrapper {
+    margin-top: 30px;
   }
 
   .navigation li {
     display: block;
-    margin: 10px 0;
   }
 
   .blog-button {
