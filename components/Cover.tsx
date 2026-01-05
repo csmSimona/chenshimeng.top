@@ -202,6 +202,10 @@ export default function Cover({ title, subtitle, enableTyping = false }: CoverPr
           <a href="mailto:simonacsm@163.com" target="_blank" className="mb-4">
             <img src="/email.svg" alt="Email" className="h-6 w-6" />
           </a>
+
+          {/* <a href="https://www.yuque.com/erxiongbushixionger/cv3z9l/ykpr8bqqyc7iegwl?singleDoc# 《阅读记录》" target="_blank" className="mb-4">
+            <img src="/yuque.svg" alt="Yuque" className="h-6 w-6" />
+          </a> */}
         </div>
         <a className="scroll-down-arrow flex items-center justify-center">
           <ChevronDown className="h-8 w-8" />

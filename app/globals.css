@@ -356,6 +356,34 @@
   100% { opacity: 1; }
 }
 
+/* 技术栈自动滚动动画 */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50%));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  width: max-content;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

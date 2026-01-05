@@ -7,7 +7,7 @@ export default function About() {
     <div className="min-h-screen bg-zinc-50 font-sans dark:bg-black">
       <Cover 
         title="关于"
-        subtitle="关于我"
+        // subtitle="关于我"
         enableTyping={false}
       />
 
