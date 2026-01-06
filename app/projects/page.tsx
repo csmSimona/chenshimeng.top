@@ -8,7 +8,7 @@ export default function Projects() {
     {
       id: 1,
       title: "锁屏背单词",
-      subtitle: "Android移动应用",
+      subtitle: "基于Android平台的创新背单词应用",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
       imageAlt: "锁屏背单词应用截图",
       link: "#",
@@ -16,7 +16,7 @@ export default function Projects() {
     {
       id: 2,
       title: "个人博客",
-      subtitle: "技术文章分享",
+      subtitle: "记录技术学习与实践的个人博客",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
       imageAlt: "个人博客网站截图",
       link: "#",
@@ -24,7 +24,7 @@ export default function Projects() {
     {
       id: 3,
       title: "电商平台",
-      subtitle: "在线购物系统",
+      subtitle: "功能完善的现代化电商购物平台",
       image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&h=400&fit=crop",
       imageAlt: "电商平台网站截图",
       link: "#",
@@ -32,7 +32,7 @@ export default function Projects() {
     {
       id: 4,
       title: "任务管理工具",
-      subtitle: "高效任务管理",
+      subtitle: "提升团队效率的任务协作管理工具",
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
       imageAlt: "任务管理工具截图",
       link: "#",
@@ -40,7 +40,7 @@ export default function Projects() {
     {
       id: 5,
       title: "数据分析平台",
-      subtitle: "数据可视化分析",
+      subtitle: "直观展示数据洞察的可视化分析平台",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       imageAlt: "数据分析平台截图",
       link: "#",
@@ -48,7 +48,7 @@ export default function Projects() {
     {
       id: 6,
       title: "社交媒体应用",
-      subtitle: "社交网络平台",
+      subtitle: "专注于内容分享的社交网络应用",
       image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&h=400&fit=crop",
       imageAlt: "社交媒体应用截图",
       link: "#",
@@ -73,12 +73,12 @@ export default function Projects() {
                 <div key={product.id} className="md:px-3">
                   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 h-full p-6 md:p-8">
                     <div>
-                      <h3 className="text-xl text-gray-500 dark:text-gray-400 text-center font-bold mb-1">
-                        {product.subtitle}
-                      </h3>
-                      <h3 className="text-xl text-center font-bold mb-4 text-gray-900 dark:text-white">
+                      <h3 className="text-2xl text-center font-bold mb-2 text-gray-900 dark:text-white">
                         {product.title}
                       </h3>
+                      <p className="text-base text-gray-500 dark:text-gray-400 text-center mb-4">
+                        {product.subtitle}
+                      </p>
                       <a
                         href={product.link}
                         target="_blank"

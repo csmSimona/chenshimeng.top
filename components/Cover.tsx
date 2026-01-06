@@ -1,15 +1,15 @@
 'use client'
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Home as HomeIcon, Book, Code, Image as ImageIcon, User, ChevronDown, Github } from "lucide-react";
+import { Home as HomeIcon, Book, Code, Image as ImageIcon, Earth, ChevronDown, Github } from "lucide-react";
 
 interface CoverProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   enableTyping?: boolean;
 }
 
-export default function Cover({ title, subtitle, enableTyping = false }: CoverProps) {
+export default function Cover({ title = '', subtitle = '', enableTyping = false }: CoverProps) {
   const panelRef = useRef<HTMLDivElement>(null);
   const [typedText, setTypedText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -173,7 +173,7 @@ export default function Cover({ title, subtitle, enableTyping = false }: CoverPr
                     <li className="navigation__item">
                       <Button variant="ghost" className="blog-button text-white hover:text-primary px-4 py-2 rounded-full flex items-center gap-2" asChild>
                         <a href="/about">
-                          <User className="h-4 w-4" />
+                          <Earth className="h-4 w-4" />
                           关于
                         </a>
                       </Button>
