@@ -372,6 +372,11 @@
   flex-wrap: nowrap;
   gap: 12px;
   width: max-content;
+  transition: animation-play-state 0.3s ease;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
 }
 
 /* 隐藏滚动条 */
