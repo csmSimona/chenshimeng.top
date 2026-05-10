@@ -8,18 +8,32 @@ export default function Home() {
   const projects = [
     {
       id: "projects",
+      title: "个人网站",
+      subtitle: "个人主页",
+      description: "基于 Next.js、TypeScript 和 Tailwind CSS 构建的个人展示网站，整合了首页封面、作品展示、个人文档入口、图库、关于页面与技术栈展示。项目采用响应式布局和组件化设计，并通过 React Three Fiber 打造沉浸式图库交互。",
+      techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Three.js'],
+      buttonText: "访问网站",
+      buttonLink: "https://chenshimeng.top/",
+      imageSrc: "/projects/personal-site.jpg",
+      imageAlt: "个人网站预览",
+      browserUrl: "chenshimeng.top",
+      backgroundColor: "bg-zinc-50 dark:bg-gray-900",
+      accentColor: "blue",
+      reverse: false
+    },
+    {
       title: "个人文档",
       subtitle: "技术文档",
       description: "基于 VitePress 构建的个人技术文档站点，专注于前端技术分享、学习笔记和开发实践总结。提供清晰的分类导航、代码高亮和响应式设计，打造优质的阅读体验。",
       techs: ['VitePress', 'Vue3', 'TypeScript', 'Markdown'],
       buttonText: "访问文档",
       buttonLink: "http://doc.chenshimeng.top/",
-      imageSrc: "/docs.png",
+      imageSrc: "/projects/docs.png",
       imageAlt: "个人文档预览",
       browserUrl: "doc.chenshimeng.top",
-      backgroundColor: "bg-zinc-50 dark:bg-gray-900",
-      accentColor: "blue",
-      reverse: false
+      backgroundColor: "bg-white dark:bg-gray-950",
+      accentColor: "green",
+      reverse: true
     },
     {
       title: "锁屏背单词",
@@ -31,9 +45,9 @@ export default function Home() {
       imageSrc: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
       imageAlt: "锁屏背单词预览",
       browserUrl: "lockword.example.com",
-      backgroundColor: "bg-white dark:bg-gray-950",
+      backgroundColor: "bg-zinc-50 dark:bg-gray-900",
       accentColor: "indigo",
-      reverse: true
+      reverse: false
     },
   ];
 
@@ -85,7 +99,7 @@ export default function Home() {
       />
 
       {/* 项目展示区域 */}
-      {projects.map((project, index) => (
+      {/* {projects.map((project, index) => (
         <ProjectShowcase
           key={index}
           id={project.id}
@@ -102,21 +116,24 @@ export default function Home() {
           accentColor={project.accentColor}
           reverse={project.reverse}
         />
-      ))}
+      ))} */}
 
       {/* 关于部分 */}
-      <section id="about" className="bg-gray-50 dark:bg-gray-900 py-20">
+      {/* <section id="about" className="bg-gray-50 dark:bg-gray-900 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 md:p-12 text-center max-w-5xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">你好，我是 Simona</h2>
-            <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto mb-10">
-              一名热衷于技术的开发者，享受探索新技术、解决复杂问题，并将创意转化为实际产品的过程。我拥有扎实的开发经验，熟练掌握现代技术栈，始终致力于通过技术解决现实问题，为用户创造价值。
+            <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto mb-4">
+              资深前端研发，深耕中后台系统、数据可视化、移动端 H5 及小程序全流程项目落地
             </p>
-            <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto mb-10">
-              在中后台管理系统、数据可视化大屏以及移动应用开发等领域，我积累了丰富的项目实践经验。
+            <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto mb-4">
+              具备前端工程化基建、通用组件体系搭建能力，拥有全栈协作与自动化部署实战经验
             </p>
-            <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto mb-10">
-              技术之外，我也热爱阅读与旅行。始终相信“读万卷书，行万里路”，保持好奇与持续学习，是我不断成长的重要源泉。
+            <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto mb-4">
+              擅长借助 AI 赋能研发，熟练运用 AI 编程与大模型工具，持续提升开发效率与代码质量
+            </p>
+            <p className="text-gray-500 dark:text-gray-300 text-base leading-relaxed max-w-3xl mx-auto mb-4">
+              保持长期学习与技术迭代，目前持续深耕 AI 应用开发方向，不断拓展技术边界
             </p>
             
             <div className="relative overflow-hidden py-4">
@@ -126,9 +143,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

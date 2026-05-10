@@ -77,7 +77,7 @@ export default function ProjectShowcase({
         )}
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center'>
           {/* 内容区域 */}
-          <div className={`text-left space-y-8 ${reverse ? 'lg:col-span-5 lg:order-last' : 'lg:col-span-6'}`}>
+          <div className={`text-left space-y-8 lg:col-span-6 ${reverse ? 'lg:order-last' : ''}`}>
             <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${accentClasses.badge}`}>
               {subtitle}
             </div>
@@ -106,7 +106,7 @@ export default function ProjectShowcase({
           </div>
           
           {/* 图片展示区 */}
-          <div className={`relative ${reverse ? 'lg:col-span-7 lg:order-first' : 'lg:col-span-6'}`}>
+          <div className={`relative lg:col-span-6 ${reverse ? 'lg:order-first' : ''}`}>
             {/* Background Blob */}
             <div className={`absolute -inset-4 ${accentClasses.blob} rounded-3xl z-0 blur-2xl`}></div>
             

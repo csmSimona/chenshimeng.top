@@ -1,5 +1,6 @@
 'use client'
 import * as THREE from 'three'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Image, Scroll, ScrollControls, useScroll } from '@react-three/drei'
@@ -11,6 +12,15 @@ import { Button } from '@/components/ui/button'
 const minimapMaterial = new THREE.MeshBasicMaterial({ color: 'white' })
 const minimapGeometry = new THREE.BoxGeometry(0.01, 1, 0.01)
 const BOOK_COVER_ASPECT = 5 / 7
+const navigationButtonClass =
+  'blog-button flex items-center gap-1 rounded-full !px-2.5 !py-2 text-xs text-white hover:text-primary sm:gap-2 sm:!px-4 sm:text-sm'
+
+type GalleryImageMesh = THREE.Mesh & {
+  material: THREE.MeshBasicMaterial & {
+    grayscale: number
+    scale: THREE.Vector2
+  }
+}
 
 const galleryState = proxy<{
   clicked: number | null
@@ -59,7 +69,7 @@ function Item({
   scale: [number, number]
   url: string
 }) {
-  const ref = useRef<any>(null)
+  const ref = useRef<GalleryImageMesh>(null)
   const scroll = useScroll()
   const { clicked, urls } = useSnapshot(galleryState)
   const [hovered, hover] = useState(false)
@@ -100,6 +110,7 @@ function Item({
   })
 
   return (
+    // eslint-disable-next-line jsx-a11y/alt-text -- This is a drei canvas image, not an HTML img.
     <Image
       ref={ref}
       {...props}
@@ -155,47 +166,47 @@ export default function GalleryPage() {
 
   return (
     <div className="h-screen w-full bg-[#151515]">
-      <div className="pointer-events-none absolute left-1/2 top-6 z-20 -translate-x-1/2">
-        <nav className="pointer-events-auto cover-navigation cover-navigation--primary">
-          <ul className="navigation flex flex-col gap-2 sm:flex-row justify-center rounded-2xl p-2 backdrop-blur">
-            <li className="navigation__item">
-              <Button variant="ghost" className="blog-button text-white hover:text-primary px-4 py-2 rounded-full flex items-center gap-2" asChild>
-                <a href="/">
+      <div className="pointer-events-none absolute left-1/2 top-4 z-20 flex w-full -translate-x-1/2 justify-center px-2 sm:top-6">
+        <nav className="pointer-events-auto cover-navigation cover-navigation--primary max-w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <ul className="navigation flex w-max flex-row flex-nowrap items-center justify-center gap-1 rounded-2xl !p-1.5 backdrop-blur sm:gap-2 sm:!p-2">
+            <li className="navigation__item shrink-0">
+              <Button variant="ghost" className={navigationButtonClass} asChild>
+                <Link href="/">
                   <HomeIcon className="h-4 w-4" />
                   首页
-                </a>
+                </Link>
               </Button>
             </li>
-            <li className="navigation__item">
-              <Button variant="ghost" className="blog-button text-white hover:text-primary px-4 py-2 rounded-full flex items-center gap-2" asChild>
-                <a href="http://doc.chenshimeng.top" target="_blank">
+            <li className="navigation__item shrink-0">
+              <Button variant="ghost" className={navigationButtonClass} asChild>
+                <a href="http://doc.chenshimeng.top" target="_blank" rel="noreferrer">
                   <Book className="h-4 w-4" />
                   文档
                 </a>
               </Button>
             </li>
-            <li className="navigation__item">
-              <Button variant="ghost" className="blog-button text-white hover:text-primary px-4 py-2 rounded-full flex items-center gap-2" asChild>
-                <a href="/projects">
+            <li className="navigation__item shrink-0">
+              <Button variant="ghost" className={navigationButtonClass} asChild>
+                <Link href="/projects">
                   <Code className="h-4 w-4" />
                   项目
-                </a>
+                </Link>
               </Button>
             </li>
-            <li className="navigation__item">
-              <Button variant="ghost" className="blog-button text-white hover:text-primary px-4 py-2 rounded-full flex items-center gap-2" asChild>
-                <a href="/gallery">
+            <li className="navigation__item shrink-0">
+              <Button variant="ghost" className={navigationButtonClass} asChild>
+                <Link href="/gallery">
                   <ImageIcon className="h-4 w-4" />
                   图库
-                </a>
+                </Link>
               </Button>
             </li>
-            <li className="navigation__item">
-              <Button variant="ghost" className="blog-button text-white hover:text-primary px-4 py-2 rounded-full flex items-center gap-2" asChild>
-                <a href="/about">
+            <li className="navigation__item shrink-0">
+              <Button variant="ghost" className={navigationButtonClass} asChild>
+                <Link href="/about">
                   <Earth className="h-4 w-4" />
                   关于
-                </a>
+                </Link>
               </Button>
             </li>
           </ul>
