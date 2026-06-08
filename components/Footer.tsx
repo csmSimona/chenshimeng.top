@@ -25,10 +25,10 @@ export default function Footer() {
             <p className="text-gray-400">GitHub：<a href="https://github.com/csmSimona" target="_blank">https://github.com/csmSimona</a></p>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        {/* <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p className="text-sm">Released under the MIT License.</p>
           <p className="text-sm">Copyright © 2025-{new Date().getFullYear()} 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备2025215771号</a></p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

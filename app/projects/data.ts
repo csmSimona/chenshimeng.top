@@ -1,0 +1,120 @@
+import type { Project } from "./types";
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    name: "个人网站",
+    summary: "个人展示与作品聚合站点",
+    description:
+      "基于 Next.js、TypeScript 和 Tailwind CSS 构建的个人网站，旨在展示个人作品、个人文档、图库、技术栈和专业背景，并使用 React Three Fiber 打造沉浸式图库交互。",
+    techs: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Three.js"],
+    image: "/projects/personal-site.jpg",
+    imageAlt: "个人网站产品截图",
+    githubUrl: "https://github.com/csmSimona/chenshimeng.top",
+    liveUrl: "https://chenshimeng.top/",
+  },
+  {
+    id: 2,
+    name: "个人文档",
+    summary: "技术文档与学习笔记站点",
+    description:
+      "基于 VitePress 构建的个人技术文档站点，沉淀前端知识、算法笔记、开发记录与实践总结，提供清晰导航、代码高亮和响应式阅读体验。",
+    techs: ["VitePress", "Vue3", "TypeScript", "Markdown"],
+    image: "/projects/docs.png",
+    imageAlt: "个人文档产品截图",
+    githubUrl: "https://github.com/csmSimona/csmSimona.github.io",
+    liveUrl: "https://doc.chenshimeng.top/",
+  },
+  {
+    id: 3,
+    name: "OfferMate（面一下）",
+    summary: "AI 智能模拟面试平台",
+    description:
+      "面向技术求职者的 AI 智能模拟面试平台，支持根据目标岗位、工作年限、JD 和简历生成个性化模拟面试。系统通过语音交互、简历深挖、自适应追问和结构化报告生成，模拟真实技术面试流程，帮助用户完成面试训练闭环。",
+    techs: [
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zustand",
+      "Zod",
+      "ECharts",
+      "Monaco Editor",
+      "Web Speech API",
+      "Whisper API",
+      "LangChain",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    image: "/projects/offermate.png",
+    imageAlt: "OfferMate 项目产品图",
+    githubUrl: "https://github.com/csmSimona/OfferMate",
+  },
+  {
+    id: 4,
+    name: "ai-application-playground（AI 应用实验场）",
+    summary: "AI 应用聚合工具",
+    description:
+      "基于 Next.js 构建的 AI 应用练习场，用于快速体验多种常见 AI 应用场景。支持用户在页面中自行配置 API Key、Base URL 和模型名称。",
+    techs: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel AI SDK", "OpenAI Compatible API", "Anthropic API"],
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&h=600&fit=crop",
+    imageAlt: "ai-application-playground 项目产品图",
+    githubUrl: "https://github.com/csmSimona/ai-application-playground",
+    liveUrl: "https://ai-application-playground.vercel.app/",
+  },
+  {
+    id: 5,
+    name: "bilingual-epub-ebook（双语 EPUB 电子书合成器）",
+    summary: "中英对照电子书生成工具",
+    description:
+      "上传中文和英文 EPUB 后，自动生成可下载的中英对照电子书与对齐报告，适合双语阅读、语言学习和电子书内容处理场景。",
+    techs: ["Next.js", "React", "TypeScript", "Node.js", "JSZip", "fast-xml-parser", "htmlparser2", "EPUB", "XHTML", "OPF", "NCX"],
+    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=900&h=600&fit=crop",
+    imageAlt: "双语 EPUB 电子书合成器产品图",
+    githubUrl: "https://github.com/csmSimona/bilingual-epub-ebook",
+    liveUrl: "https://bilingual-epub-ebook.vercel.app/",
+  },
+  {
+    id: 6,
+    name: "云服务图片管理SaaS应用",
+    summary: "云服务图片管理 SaaS 应用",
+    description:
+      "面向开发者和小型团队的图片上传与托管 SaaS 平台，支持多应用管理、对象存储配置、拖拽/粘贴上传、API Key 接入和 Stripe 订阅升级，并沉淀了可复用的前端上传组件 SDK。",
+    techs: ["Next.js", "React", "TypeScript", "Tailwind CSS", "tRPC", "NextAuth", "Drizzle ORM", "PostgreSQL / Neon", "S3 对象存储", "Uppy", "Stripe", "pnpm workspace"],
+    image: "/projects/image-saas.png",
+    imageAlt: "云服务图片管理 SaaS 应用产品图",
+    githubUrl: "https://github.com/csmSimona/image-sass-project",
+  },
+  {
+    id: 7,
+    name: "低代码数据可视化大屏搭建平台",
+    summary: "可视化大屏低代码编辑器",
+    description:
+      "基于 Vue3 的低代码数据可视化开发平台，主要用于快速搭建和管理可视化大屏。系统包含大屏列表、大屏编辑器和预览页面，支持通过拖拽或双击的方式将图表、地图、文本、按钮、滚动表格等组件添加到画布中。",
+    techs: ["Vue3", "Vite", "TypeScript", "Pinia", "Naive UI", "Tailwind CSS", "ECharts", "Axios", "Monaco Editor", "vue3-sketch-ruler"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop",
+    imageAlt: "低代码数据可视化开发平台产品图",
+    githubUrl: "https://github.com/csmSimona/vue-lowcode-cockpit-admin",
+  },
+  {
+    id: 8,
+    name: "yummy-food",
+    summary: "美食菜谱类 WebApp",
+    description:
+      "一个以菜谱分享、烹饪交流和健康饮食资讯为核心的美食社区应用。用户可以浏览和搜索菜谱，查看详细制作步骤，收藏、评论菜谱，也可以发布自己的菜谱和动态，与其他用户互动交流。",
+    techs: ["React", "Redux", "React Router", "styled-components", "antd-mobile", "Axios", "Node.js", "Express", "MongoDB", "Mongoose", "JWT"],
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&h=600&fit=crop",
+    imageAlt: "美食食谱类 WebApp 产品图",
+    githubUrl: "https://github.com/csmSimona/yummy-food",
+  },
+  {
+    id: 9,
+    name: "锁屏背单词",
+    summary: "Android 碎片化记忆应用",
+    description:
+      "一款基于 Android 平台的背单词软件，通过手机解锁场景触发单词记忆，把高频但零散的碎片时间转化为轻量学习流程。",
+    techs: ["Java", "Android", "SQLite", "Material Design"],
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=900&h=600&fit=crop",
+    imageAlt: "锁屏背单词产品图",
+    githubUrl: "https://github.com/csmSimona/SorkWord",
+  },
+];
